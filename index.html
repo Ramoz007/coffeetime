@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Coffee Time</title>
+</head>
+<body>
+  <main>
+
+    <!--navigation bar-->
+    <nav>
+      <span id="nav-title">Coffee Time</span>
+      <li><a href="#">Home</a></li>
+    </nav>
+
+    <!--main divs-->
+
+    <!--main div 1-->
+    <div class="main-left" id="main-left">
+      <div class="slanted-left">
+        <div>
+          <h1>Ingredients</h1>
+          <div class="space-div"></div>
+          <p>
+            Coffee - <span id="coffee-value" style="font-family: satisfy; color: #BB6B24;">X</span> teaspoons
+            <br>
+            Sugar - <span id="sugar-value" style="font-family: satisfy; color: #BB6B24;">X</span> teaspoons
+            <br>
+            Water - 3/4 cup
+            <br>
+            Milk - 1/4 cup
+          </p>
+          <div class="space-div"></div>
+          <a><div class="btn" id="open">Configure</div></a>
+        </div>
+      </div>
+      <div class="btn-right" id="brew-btn"><img src="./icons/coffee.png" style="width: 30px;"></div>
+    </div>
+
+    <!--main div 2-->
+    <div class="main-right" id="main-right">
+      <div class="btn-right" id="ingre-btn"><img src="./icons/ingre-coffee.png" style="width: 30px;"></div>
+      <div class="slanted-right">
+        <div>
+          <h1>Method</h1>
+          <div class="space-div"></div>
+          <p>
+            1. Add Coffee and Sugar
+            <br>
+            2. Boil the water
+            <br>
+            3. Add boiling water and milk
+            <br>
+            4. Stir and Enjoy!!!
+          </p>
+          <div class="space-div"></div>
+          <a onclick="alertMsg()"><div class="btn" id="open">Brew</div></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--footer-->
+  <footer>
+      <a href="https://www.instagram.com/lexico_code/">
+        <img src="./icons/instagram.png" style="width: 30px;"> <span class="linkB">Instgram</span>
+      </a>
+      <a href="https://github.com/Ramoz007">
+        <img src="./icons/github.png" style="width: 30px;"> <span class="linkB">Github</span>
+      </a>
+      <a href="https://www.youtube.com/channel/UCWsmj35M3AWGXtJwvzk-JfA">
+        <img src="./icons/youtube.png" style="width: 30px;"> <span class="linkB">Youtube</span>
+      </a>
+    </footer>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal-container" id="modal">
+    <div class="modal">
+      <div class="img-div"><img style="height: 200px; border-radius: 5px;" src="./images/ingredients_add.png"></div>
+      <div class="modal-content">
+        <span>Configure the coffee to your taste!</span>
+        <div class="space-div"></div>
+        <form class="modal-form" id="modal-form">
+          <div class="form-control">
+            <label for="coffee">Coffee</label>
+            <input
+              type="text"
+              id="coffee"
+              placeholder="Enter Coffee Amount"
+              class="form-input"
+            />
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="sugar">Sugar</label>
+            <input
+              type="text"
+              id="sugar"
+              placeholder="Enter Sugar Amount"
+              class="form-input"
+            />
+            <small>Error message</small>
+          </div>
+          <input type="submit" value="Add" class="btn" />
+        </form>
+      </div>
+      <div id="close-icon"><a></a><img src="./icons/cross.png" style="width: 20px;"></a></div>
+    </div>
+  </div>
+
+  <!--main js script-->
+  <script src="main.js"></script>
+</body>
+</html>

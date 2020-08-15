@@ -1,0 +1,342 @@
+/*font imports*/
+@font-face{
+  src: url(./Satisfy/Satisfy-Regular.ttf);
+  font-family: satisfy;
+}
+
+/*utilities*/
+:root{
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+  --modal-duration: 1s;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+html{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+  transition: transform 0.3s ease;
+}
+nav{
+  background-color: #BB6B24;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  align-items: center;
+  color: white;
+}
+li{
+  list-style-type: none;
+}
+h1{
+  font-family: satisfy;
+  font-size: 2.5rem;
+}
+p{
+  font-size: 2rem;
+}
+a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+a:hover{
+  color: black;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/*id's*/
+#nav-title{
+  font-size: 2rem;
+  font-family: satisfy;
+}
+#close-icon {
+  color:black;
+  padding: 10px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  cursor: pointer;
+}
+
+/*classes*/
+span{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2rem;
+}
+
+/*main divs*/
+.main-left{
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url("./images/ingredients.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-right{
+  padding-left: 100px;
+  height: 80vh;
+  width: 100vw;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url("./images/brewing.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slanted-left{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.slanted-right{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+/*buttons*/
+.btn{
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px;
+  width: 100px;
+}
+.btn-right{
+  padding: 10px;
+  background-color: green;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-right:hover{
+  color: black;
+  box-shadow: 0 8px 16px 0 green;
+}
+.btn:hover{
+  color: black;
+  box-shadow: 0 8px 16px 0 green;
+}
+
+/*general div for spacing*/
+.space-div{
+  height: 30px;
+}
+
+/*footer*/
+footer{
+  background-color: #BB6B24;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  align-items: center;
+  color: white;
+}
+
+/*modal*/
+.modal-container{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  position: fixed;
+  display: none;
+  padding-top: 8vh;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+.modal-container.show-modal {
+  display: block;
+}
+.modal{
+  border-radius: 20px;
+  position: relative;
+  width: 800px;
+  margin: auto;
+  box-shadow: 0 8px 16px #BB6B24;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  max-width: 100%;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+.img-div{
+  flex: 1;
+  padding-left: 20px;
+  padding-top: 5px;
+}
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.form-control label {
+  color: black;
+  display: block;
+  margin-bottom: 5px;
+}
+.form-control input {
+  border: 2px solid #BB6B24;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+.form-control input:focus {
+  outline: 0;
+  border-color: #BB6B24;
+}
+.form-control.success input {
+  border-color: var(--success-color);
+}
+.form-control.error input {
+  border-color: var(--error-color);
+}
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+.form-control.error small {
+  visibility: visible;
+}
+label {
+  display: inline-block;
+  font-weight: bold;
+  margin: 5px 0;
+  font-family: satisfy;
+  font-size: 1.5rem;
+}
+input{
+  background-color: transparent;
+  border: 2px solid #BB6B24;
+  border-radius: 3px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+}
+.modal-content{
+  width: 100%;
+  padding: 50px;
+}
+
+/*animation keyframes*/
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/*media queries for mobile screen size*/
+@media (max-width: 700px) {
+  .modal{
+    flex-direction: column;
+  }
+  #img{
+    height: 200px;
+    flex: 0;
+  }
+  form{
+    flex: 3;
+  }
+  .main-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./images/ingre_small.png");
+    background-blend-mode: normal;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .main-right{
+    padding-left: 0px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    background-image: url("./images/brew_small.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .slanted-right{
+    margin-left: 50px;
+  }
+  .linkB{
+    display: none;
+  }
+  .modal-container{
+    width: 80%;
+    height: 90vh;
+    margin-left: 10vw;
+    display: flex;
+    position: fixed;
+    display: none;
+    padding-top: 8vh;
+    z-index: 1;
+    left: 0;
+    top: 0;
+  }
+  .modal{
+    border-radius: 20px;
+    position: relative;
+    height: 90vh;
+    margin: auto;
+    box-shadow: 0 8px 16px #BB6B24;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+  }
+  .img-div{
+    height: 200px;
+    padding-left: 20px;
+    padding-top: 5px;
+  }
+  #img{
+    height: 200px;
+  } 
+  span{
+    font-size:1.5rem;
+  }
+}
