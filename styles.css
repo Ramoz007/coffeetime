@@ -270,7 +270,7 @@ input{
 }
 
 /*media queries for mobile screen size*/
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   #img{
     height: 200px;
   }
