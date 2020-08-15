@@ -82,30 +82,32 @@
   <!-- Modal -->
   <div class="modal-container" id="modal">
     <div class="modal">
-      <div class="img-div"><img style="height: 200px; border-radius: 5px;" src="./images/ingredients_add.png"></div>
+      <div class="img-div"><img style="height: 200px; border-radius: 5px; margin-top: 20px;" src="./images/ingredients_add.png"></div>
       <div class="modal-content">
         <span>Configure the coffee to your taste!</span>
         <div class="space-div"></div>
         <form class="modal-form" id="modal-form">
-          <div class="form-control">
-            <label for="coffee">Coffee</label>
-            <input
-              type="text"
-              id="coffee"
-              placeholder="Enter Coffee Amount"
-              class="form-input"
-            />
-            <small>Error message</small>
-          </div>
-          <div class="form-control">
-            <label for="sugar">Sugar</label>
-            <input
-              type="text"
-              id="sugar"
-              placeholder="Enter Sugar Amount"
-              class="form-input"
-            />
-            <small>Error message</small>
+          <div id="inpt">
+            <div class="form-control">
+              <label for="coffee">Coffee</label>
+              <input
+                type="text"
+                id="coffee"
+                placeholder="Enter Coffee Amount"
+                class="form-input"
+              />
+              <small>Error message</small>
+            </div>
+            <div class="form-control">
+              <label for="sugar">Sugar</label>
+              <input
+                type="text"
+                id="sugar"
+                placeholder="Enter Sugar Amount"
+                class="form-input"
+              />
+              <small>Error message</small>
+            </div>
           </div>
           <input type="submit" value="Add" class="btn" />
         </form>
