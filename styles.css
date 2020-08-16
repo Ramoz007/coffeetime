@@ -335,9 +335,6 @@ input{
   }
 }
 @media (max-height: 700px) {
-  .img-div{
-    display: none;
-  }
   .modal-container{
     height: 80vh;
   }
