@@ -299,7 +299,16 @@ input{
     background-size: cover;
   }
   .slanted-right{
-    margin-left: 50px;
+    background-color: #f8f8f8;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .slanted-left{
+    background-color: #f8f8f8;
+    margin-bottom: 10px;
+    padding: 30px;
+    border-radius: 10px;
   }
   .linkB{
     display: none;
