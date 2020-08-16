@@ -24,10 +24,10 @@ body{
 }
 nav{
   background-color: #BB6B24;
-  height: 10vh;
   display: flex;
+  min-height: 70px;
   justify-content: space-between;
-  padding: 0 50px;
+  padding: 10px 20px;
   align-items: center;
   color: white;
 }
@@ -84,9 +84,8 @@ span{
 
 /*main divs*/
 .main-left{
-  height: 80vh;
-  width: 100vw;
   display: flex;
+  min-height: 80vh;
   justify-content: space-around;
   align-items: center;
   background-image: url("./images/ingredients.png");
@@ -95,8 +94,7 @@ span{
 }
 .main-right{
   padding-left: 100px;
-  height: 80vh;
-  width: 100vw;
+  min-height: 80vh;
   display: none;
   justify-content: space-around;
   align-items: center;
@@ -154,12 +152,14 @@ span{
 /*footer*/
 footer{
   background-color: #BB6B24;
-  height: 10vh;
   display: flex;
   justify-content: space-between;
-  padding: 0 50px;
+  padding: 0px 20px;
+  height: 70px;
   align-items: center;
   color: white;
+  position: absolute;
+  width: 100%;
 }
 
 /*modal*/
@@ -308,14 +308,13 @@ input{
     width: 80%;
     height: 90vh;
     margin-left: 10vw;
-    display: flex;
+    display: none;
     flex-direction: column;
     position: fixed;
-    display: none;
     padding-top: 5vh;
   }
   .modal{
-    height: 80vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
   }
@@ -333,5 +332,16 @@ input{
   #inpt{
     display: flex;
     flex-direction: column;
+  }
+}
+@media (max-height: 700px, min-width: 600px) {
+  .img-div{
+    display: none;
+  }
+  .modal-container{
+    height: 80vh;
+  }
+  .modal{
+    height: 80vh;
   }
 }
