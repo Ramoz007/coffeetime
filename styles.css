@@ -311,7 +311,7 @@ input{
     display: none;
     flex-direction: column;
     position: fixed;
-    padding-top: 5vh;
+    padding-top: 2vh;
   }
   .modal{
     height: 90vh;
@@ -334,7 +334,7 @@ input{
     flex-direction: column;
   }
 }
-@media (max-height: 700px, min-width: 600px) {
+@media (max-height: 700px) {
   .img-div{
     display: none;
   }
